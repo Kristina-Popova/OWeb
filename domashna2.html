@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Pizza</title>
+  <link rel="stylesheet" href="domashna2.css"> <!-- link do css fajlot -->
+</head>
+<body>
+  <center>
+    <h1>Order Pizza!</h1>
+    <form>
+      <p><b>Select the pizza size:</b></p>
+      <input type="radio" id="big" name="size" value="big" checked>
+      <label for="big">Big</label><br>
+      
+      <input type="radio" id="medium" name="size" value="medium">
+      <label for="medium">Medium</label><br>
+      
+      <input type="radio" id="small" name="size" value="small">
+      <label for="small">Small</label><br><br>
+
+      <p><b>Select the crust type:</b></p>
+      <select name="crust">
+        <option value="deepdish">Deep Dish</option>
+        <option value="thincrust">Thin Crust</option>
+        <option value="regularcrust">Regular Crust</option>
+      </select><br><br>
+
+      <p><b>Select the filler:</b></p>
+      <input type="checkbox" id="sausages" name="filler" value="sausages">
+      <label for="sausages">Sausages</label><br>
+
+      <input type="checkbox" id="pepper" name="filler" value="pepper">
+      <label for="pepper">Pepper</label><br>
+
+      <input type="checkbox" id="mushrooms" name="filler" value="mushrooms">
+      <label for="mushrooms">Mushrooms</label><br><br>
+
+      <table>
+        <tr>
+          <td><b>Name:</b></td>
+          <td><input type="text" id="name" name="name"></td>
+        </tr>
+        <tr>
+          <td><b>Phone:</b></td>
+          <td><input type="text" id="phone" name="phone"></td>
+        </tr>
+      </table><br>
+
+      <textarea id="message" name="message" rows="4" cols="50" placeholder="Message"></textarea><br>
+
+      <input type="submit" value="Send">
+      <input type="reset" value="Reset">
+    </form>
+  </center>
+</body>
+</html>
