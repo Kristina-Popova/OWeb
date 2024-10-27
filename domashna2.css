@@ -3,47 +3,47 @@ body {
     padding-top: 10%;
     background-image: url(pizza2.avif);
     background-repeat: no-repeat;
-    background-size: cover; /* Characteristic: Background Size */
-    font-family: Arial, sans-serif; /* Characteristic: Font Family */
-    line-height: 1.6; /* Characteristic: Line Height */
-    margin: 0; /* Characteristic: Margin */
-    color: #333; /* Characteristic: Text Color */
+    background-size: cover; /* karakteristika: Background Size */
+    font-family: Arial, sans-serif; /* karakteristika: Font Family */
+    line-height: 1.6; /* karakteristika: Line Height */
+    margin: 0; /* karakteristika: Margin */
+    color: #333; /* karakteristika: Text Color */
   }
   h1 {
-    color: rgb(236, 53, 53);  /* Rule: Color */
-    font-size: 2.5em;         /* Rule: Font Size */
-    margin: 20px;             /* Rule: Margin */
-    background-color: rgba(255, 255, 255, 0.8); /* Rule: Background Color */
-    padding: 10px;            /* Characteristic: Padding */
-    text-align: center;       /* Characteristic: Text Alignment */
-    border-radius: 10px;      /* Characteristic: Border Radius */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Characteristic: Box Shadow */
-    text-transform: uppercase; /* Characteristic: Text Transform */
+    color: rgb(236, 53, 53);  /* pravilo: Color */
+    font-size: 2.5em;         /* pravilo: Font Size */
+    margin: 20px;             /* pravilo: Margin */
+    background-color: rgba(255, 255, 255, 0.8); /* pravilo: Background Color */
+    padding: 10px;            /* karakteristika: Padding */
+    text-align: center;       /* karakteristika: Text Alignment */
+    border-radius: 10px;      /* karakteristika: Border Radius */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* karakteristika: Box Shadow */
+    text-transform: uppercase; /* karakteristika: Text Transform */
   }
   table {
     background-color: rgba(83, 52, 6, 0.301);
     height: 200px;
-    border-collapse: collapse; /* Characteristic: Border Collapse */
-    border-radius: 5px; /* Characteristic: Border Radius */
-    overflow: hidden; /* Characteristic: Overflow */
+    border-collapse: collapse; /* karakteristika: Border Collapse */
+    border-radius: 5px; /* karakteristika: Border Radius */
+    overflow: hidden; /* karakteristika: Overflow */
   }
   th {
     text-shadow: 4px 4px 4px rgb(104, 14, 14);
     color: rgb(185, 37, 37);
     font-size: 3em;
-    border: 2px solid rgb(189, 23, 23); /* Characteristic: Border */
+    border: 2px solid rgb(189, 23, 23); /* karakteristika: Border */
   }
   td {
     color: rgb(189, 23, 23);
     font-size: 1.5em;
-    padding: 10px; /* Characteristic: Padding */
-    border: 1px solid rgb(189, 23, 23); /* Characteristic: Border */
+    padding: 10px; /* karakteristika: Padding */
+    border: 1px solid rgb(189, 23, 23); /* karakteristika: Border */
   }
   td input {
     color: rgb(189, 23, 23);
     font-size: 0.8em;
     background-color: rgba(240, 248, 255, 0);
-    border: 1px solid rgb(189, 23, 23); /* Characteristic: Border */
+    border: 1px solid rgb(189, 23, 23); /* karakteristika: Border */
   }
   td:hover {
     color: rgb(255, 96, 96);
@@ -52,20 +52,20 @@ body {
   select {
     color: rgb(189, 23, 23);
     width: 50%;
-    border: 1px solid rgb(189, 23, 23); /* Characteristic: Border */
-    border-radius: 5px; /* Characteristic: Border Radius */
-    padding: 5px; /* Characteristic: Padding */
+    border: 1px solid rgb(189, 23, 23); /* karakteristika: Border */
+    border-radius: 5px; /* karakteristika: Border Radius */
+    padding: 5px; /* karakteristika: Padding */
   }
   textarea {
     color: rgb(189, 23, 23);
     margin: 0.5em;
-    padding: 0.5em 0.7em; /* Characteristic: Padding */
+    padding: 0.5em 0.7em; /* karakteristika: Padding */
     border-radius: 10%; 
     border-width: 2px;
-    border-color: rgb(189, 23, 23); /* Characteristic: Border */
+    border-color: rgb(189, 23, 23); /* karakteristika: Border */
     background-color: rgba(240, 248, 255, 0);
-    font-family: Arial, sans-serif; /* Characteristic: Font Family */
-    font-size: 1em; /* Characteristic: Font Size */
+    font-family: Arial, sans-serif; /* karakteristika: Font Family */
+    font-size: 1em; /* karakteristika: Font Size */
   }
   img {
     height: 100%;
@@ -90,7 +90,7 @@ body {
     animation-duration: 5s;
     animation-iteration-count: infinite;
     background-color: rgba(143, 49, 49, 0.596);
-    border-radius: 5px; /* Characteristic: Border Radius */
+    border-radius: 5px; /* karakteristika: Border Radius */
   }
   @keyframes puls {
     0% {opacity: 0; left: 50px; top: 0px;}
