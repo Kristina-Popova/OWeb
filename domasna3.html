@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .game-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        #newGame {
+            display: none;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Погоди го зборот</h1>
+        <p id="hint">Помош: <span id="hintLetters"></span>___</p>
+        <input type="text" id="guessInput" maxlength="5" placeholder="Внеси го зборот" autocomplete="off">
+        <button onclick="checkGuess()">Провери</button>
+        <p id="message"></p>
+        <button id="newGame" onclick="startNewGame()">Нова игра</button>
+    </div>
+    <script>
+        const words = ["пајак", "оцена", "старт", "солза", "книга", "маска", "молив", "рамка", "сапун", "роман"];
+        let chosenWord = "";
+        let hint = "";
+        let attempts = 5;
+
+        function selectRandomWord() {
+            chosenWord = words[Math.floor(Math.random() * words.length)];
+            hint = chosenWord.slice(0, 2);
+            document.getElementById("hintLetters").innerText = hint;
+        }
+
+        function startNewGame() {
+            attempts = 5;
+            document.getElementById("message").innerText = "";
+            document.getElementById("guessInput").value = "";
+            document.getElementById("newGame").style.display = "none";
+            selectRandomWord();
+        }
+
+        function checkGuess() {
+            const guess = document.getElementById("guessInput").value.toLowerCase();
+            if (guess === chosenWord) {
+                document.getElementById("message").innerText = "Честитки! Го погодивте зборот!";
+                document.getElementById("newGame").style.display = "block";
+                alert("Честитки! Го погодивте зборот!");
+            } else {
+                attempts--;
+                if (attempts > 0) {
+                    document.getElementById("message").innerText = `Неточно! Имате уште ${attempts} обиди`;
+                } else {
+                    document.getElementById("message").innerText = `Неуспешна игра! Бараниот збор беше: "${chosenWord}".`;
+                    document.getElementById("newGame").style.display = "block";
+                    alert("Неуспешна игра! Бараниот збор беше: " + chosenWord);
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", startNewGame);
+    </script>
+</body>
+</html>
