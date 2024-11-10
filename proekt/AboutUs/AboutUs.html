@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="aboutUs.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <style>
+    html, body {
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .underline:hover {
+      text-decoration: underline #c2a45f;
+    }
+    .padding12px {
+      padding: 12px;
+    }
+    .button {
+      background-color: #72623cd3;
+      border-radius: 8px;
+      margin: 0px 10px 0px 10px;
+      width: -webkit-fill-available;
+      font-size: large; 
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .popup {
+      position: relative;
+      display: inline-block;
+    }
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      top: 45px;
+      left: 50%;
+      margin-left: -80px;
+    }
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color:  transparent transparent rgb(255, 255, 255) transparent;
+    }
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 0.5s;
+      animation: fadeIn 0.5s;
+    }
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;} 
+      to {opacity: 1;}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    
+    /* Styling for images */
+    .aboutUs img {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    /* Footer styling */
+    .footerBox {
+      padding: 15px;
+      background-color: #333;
+      color: #fff;
+      margin: 20px 0;
+    }
+    .footerTitles {
+      font-size: 1.2em;
+      color: #c2a45f;
+      font-weight: bold;
+    }
+    .footerBox p {
+      font-size: 0.9em;
+      color: #d0d0d0;
+    }
+    .footerBox form input[type="email"] {
+      padding: 10px;
+      width: 60%;
+      border: none;
+      border-radius: 4px;
+    }
+    .footerBox form input[type="submit"] {
+      padding: 10px 15px;
+      background-color: #c2a45f;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .footerBox form input[type="submit"]:hover {
+      background-color: #b3924e;
+    }
+
+    /* Social media icons */
+    .footerBox .icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .footerBox .icons {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    /* Header Styling */
+    #header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    #title p {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+      color: #333;
+    }
+    .categories {
+      font-size: 16px;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+      color: #72623c;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .categories:hover {
+      background-color: #c2a45f;
+      color: white;
+    }
+
+    /* Header text styles */
+    h2 {
+      font-size: 2em;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 2px solid #c2a45f;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body style="margin: 0px;">
+  <div id="preheader" class="preheader">
+    <p class="discount">
+      Welcome to our Vehicle Store! Free shipping for orders over $99!
+    </p>
+  </div>
+
+  <header id="header" class="header">
+    <div id="title" class="title">
+      <a href="../HomePage/vehicle.html">
+        <p>
+          <i>Your vehicle store</i>
+        </p>
+        <p style="font-size: small;">
+          <i>all your vehicles in one place</i>
+        </p>
+      </a>
+    </div>
+    <div id="main" class="main">
+      <a href="../NewVehicles/NewVehicles.html">
+        <div id="New Vehicles" class="categories underline">
+          New Vehicles
+        </div>
+      </a>
+      <a href="../UsedVehicles/UsedVehicles.html">
+        <div id="Used Vehicles" class="categories underline">
+          Used Vehicles
+        </div>
+      </a>
+      <a href="../ContactForm/ContactForm.html">
+        <div id="contactForm" class="categories underline">
+          Contact form
+        </div>
+      </a>
+      <a href="../AboutUs/AboutUs.html">
+        <div class="categories underline">
+          About Us
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <div style="max-width: fit-content;">
+    <div id="body" class="body">
+      <div id="item" class="container">
+        <img id="img1" src="aboutUs.jpg" alt="The picture can not be shown">
+        <div style="margin: 1% 10% 0px 10%; border: thin solid #7261387c; box-shadow: 0 0px 15px #463b22;" >
+          <h2>Our Story</h2>
+          <p>Founded in 2023, DriveX was born from a passion for automobiles, a commitment to quality, and a dedication to sustainable innovation. Our journey began with a small team of visionaries who set out to redefine how people perceive and experience vehicles.</p>
+          <h2>What We Believe In</h2>
+          <p>At DriveX, we hold dear a set of values that steer our brand forward:</p>
+          <ul>
+            <li>Quality Engineering: We take pride in crafting vehicles that are not only stunning but built to endure. Our attention to detail and commitment to quality ensure each model we create represents excellence on the road.</li>
+            <li>Sustainability: We're dedicated to positively impacting the environment. We use eco-conscious materials and sustainable manufacturing practices to minimize our carbon footprint.</li>
+            <li>Inclusivity: We believe that driving should be for everyone, regardless of background or needs. Our lineup is designed to be inclusive, offering a range of options for diverse lifestyles.</li>
+            <li>Customer Satisfaction: Your satisfaction is our priority. We strive to provide exceptional customer service and a seamless ownership experience.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div id="about" class="footerBox">
+        <p class="footerTitles">Phone Orders </p>
+        <p>+389 200 407</p>
+      </div>
+      <div id="clientCare" class="footerBox">
+        <p class="footerTitles">Follow Us</p>
+        <div class="icons">
+          <a href="https://www.instagram.com/drivex.dxb/" target="_blank">
+          <img src="instagram.jpg" alt="Instagram">
+        </a>
+          <p>Instagram</p>
+        </div>     
+        <div class="icons">
+          <img src="facebook.jpg" alt="Facebook">
+          <p>Facebook</p>
+        </div>
+        <div class="icons">
+          <img src="pinterest.jpg" alt="Pinterest">
+          <p>Pinterest</p>
+        </div>
+        <div class="icons">
+          <img src="linkedin.jpg" alt="LinkedIn">
+          <p>LinkedIn</p>
+        </div>
+      </div>
+      <div id="newsletter" class="footerBox">
+        <p class="footerTitles">Join Our Newsletter</p>
+        <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Pleure, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
+        <form>
+          <input type="email" placeholder="Enter Your email address" required>
+          <input type="submit" value="SIGN UP">
+        </form>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

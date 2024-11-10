@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gray Cars</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/categories.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="grayCars.css">
+  <link rel="stylesheet" href="grayCar.js">
+  <style>
+    /* General Page Styles */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .underline:hover {
+      text-decoration: underline #c2a45f;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .padding12px {
+      padding: 12px;
+    }
+
+    .button, #like {
+      background-color: #5b9bd5;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .button:hover, #like:hover {
+      background-color: #4a8ab7;
+    }
+
+    #likeCount {
+      font-size: 16px;
+      color: #333;
+      margin-left: 15px;
+    }
+
+    /* Form Styling */
+    .form-section {
+      margin-bottom: 20px;
+    }
+
+    .inputs, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .inputs:focus, textarea:focus {
+      border-color: #5b9bd5;
+      outline: none;
+    }
+
+    /* Radio Group Styling */
+    .radio-group {
+      margin: 10px 0;
+    }
+    .radio-group input {
+      margin-right: 10px;
+    }
+
+    /* Header, Images, and Footer */
+    header {
+      background-color: #726138;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    header .title p {
+      margin: 5px 0;
+    }
+
+    #content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #content h2 {
+      color: #5b9bd5;
+    }
+
+    #carSelect {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: #fff;
+      font-size: 14px;
+    }
+  </style>
+  <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  <script src="grayCars.js"></script>
+  <script src="../logIn.js"></script>
+  <script>
+    let likeCount = 0;
+    function like() {
+      likeCount++;
+      document.getElementById("likeCount").textContent = `Likes: ${likeCount}`;
+    }
+  </script>
+</head>
+
+<body>
+  <div id="preheader" class="preheader">
+    <p class="discount">Welcome to our Vehicle Store! Free shipping for orders over $99!</p>
+  </div>
+
+  <header id="header" class="header">
+    <div id="title" class="title">
+      <a href="../HomePage/vehicle.html" style="text-decoration: none; color: inherit;">
+        <p><i>Your Vehicle Store</i></p>
+        <p style="font-size: small;"><i>All your vehicle needs in one place</i></p>
+      </a>
+    </div>
+  </header>
+
+  <div id="menu" class="menu" style="text-align: center; margin-top: 20px;">
+    <a href="../NewVehicles/NewVehicles.html" class="categories underline" style="margin: 0 15px;">New Vehicles</a>
+    <a href="../UsedVehicles/UsedVehicles.html" class="categories underline" style="margin: 0 15px;">Used Vehicles</a>
+    <a href="../ContactForm/ContactForm.html" class="categories underline" style="margin: 0 15px;">Contact Form</a>
+    <a href="../AboutUs/AboutUs.html" class="categories underline" style="margin: 0 15px;">About Us</a>
+  </div>
+
+  <div style="display: flex; flex-direction: row; justify-content: space-evenly; margin-top: 30px;">
+    <img src="GrayCar1.jpg" alt="Gray Car 1" style="width: 30%; border-radius: 10px;">
+    <img src="GrayCar2.jpg" alt="Gray Car 2" style="width: 30%; border-radius: 10px;">
+    <img src="GrayCar3.jpg" alt="Gray Car 3" style="width: 30%; border-radius: 10px;">
+  </div>
+
+  <div id="content" class="padding12px">
+    <h2>Gray Cars</h2>
+    <p>Choose your perfect gray car from our collection!</p>
+    <label for="carSelect">Select a car:</label>
+    <select id="carSelect">
+      <option value="car1">Gray Car 1</option>
+      <option value="car2">Gray Car 2</option>
+      <option value="car3">Gray Car 3</option>
+    </select>
+
+    <div class="reviews">
+      <h3>User Reviews</h3>
+      <p>All of the equipment anyone would need!</p>
+      <p>Ich garantiere, dass ihre Qualität erstklassig ist</p>
+      <p>Comprerei sicuramente di nuovo da qui</p>
+    </div>
+
+    <!-- Review Form -->
+    <div class="container">
+      <form id="reviewForm" class="body">
+        <h2>Car Review Form</h2>
+        <div class="form-section">
+          <p>Name</p>
+          <input class="inputs" type="text" placeholder="Input name here..." required>
+        </div>
+        <div class="form-section">
+          <p>Surname</p>
+          <input class="inputs" type="text" placeholder="Input surname here..." required>
+        </div>
+        <div class="form-section">
+          <p>Car model</p>
+          <input class="inputs" type="text" placeholder="Model, year" required>
+        </div>
+        <div class="form-section">
+          <p>Registration plate number</p>
+          <input class="inputs" type="tel" placeholder="********" required>
+        </div>
+        <div class="form-section">
+          <p>Period of usage</p>
+          <div class="radio-group">
+            <input type="radio" name="radAnswer" id="lessThanOneYear"><label for="lessThanOneYear">Less than a year</label>
+            <input type="radio" name="radAnswer" id="moreThanOneYear"><label for="moreThanOneYear">More than one year</label>
+            <input type="radio" name="radAnswer" id="moreThanFiveYears"><label for="moreThanFiveYears">More than five years</label>
+          </div>
+        </div>
+        <div class="form-section">
+          <p>Review</p>
+          <textarea cols="30" rows="10" placeholder="Write your review..."></textarea>
+        </div>
+        <div class="form-section">
+          <input type="submit" value="Submit" class="button">
+        </div>
+      </form>
+    </div>
+
+    <!-- Like Button -->
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="like" onclick="like()">Like</button>
+      <span id="likeCount">Likes: 0</span>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer">
+    <p>&copy; 2024 DriveX. All rights reserved.</p>
+  </footer>
+</body>
+</html>

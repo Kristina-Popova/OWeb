@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveX - Vehicle Store</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/categories.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    /* Preheader */
+    .preheader {
+      background-color: #4a4a4a;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9em;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #3a3a3a;
+      color: #fff;
+    }
+
+    .title p {
+      margin: 0;
+      font-weight: bold;
+      color: #c2a45f;
+      font-size: 1.5em;
+    }
+    .title i {
+      font-size: 1.2em;
+    }
+
+    /* Menu */
+    .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      color: #c2a45f;
+      text-decoration: underline;
+    }
+
+    /* Vehicle items */
+    .container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      background-color: #f9f9f9;
+      margin-top: 10px;
+    }
+
+    .img {
+      text-align: center;
+      width: 250px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .img:hover {
+      transform: scale(1.05);
+    }
+
+    .img img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .img p {
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .img p:first-child {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .img p:last-child {
+      color: #c2a45f;
+      font-size: 1.2em;
+    }
+
+    /* Equipment section */
+    .equipment {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .equipment .item {
+      text-align: center;
+      width: 200px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .equipment img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .equipment button {
+      padding: 10px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #c2a45f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Shopping cart section */
+    #cart {
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    #cart div {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #total-price {
+      font-weight: bold;
+      color: #c2a45f;
+      padding: 10px;
+      text-align: right;
+    }
+
+    /* Footer Sections */
+    .footerBox {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+      border-top: 2px solid #c2a45f;
+    }
+
+    .footerTitles {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #c2a45f;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Newsletter */
+    #newsletter input[type="email"] {
+      padding: 10px;
+      width: 60%;
+      border: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    #newsletter input[type="submit"] {
+      padding: 10px 15px;
+      background-color: #c2a45f;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    #newsletter input[type="submit"]:hover {
+      background-color: #b3924e;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preheader -->
+  <div id="preheader" class="preheader">
+    <p>Special Offer! Free vehicle inspection for purchases over $10,000!</p>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div id="title" class="title">
+      <a href="../HomePage/vehicle.html">
+        <p><i>DriveX</i></p>
+        <p style="font-size: small;"><i>Your journey begins here</i></p>
+      </a>
+    </div>
+    <div id="main" class="main">
+      <div id="menu" class="menu">
+        <a href="../NewVehicles/NewVehicles.html">New Vehicles</a>
+        <a href="../UsedVehicles/UsedVehicles.html">Used Vehicles</a>
+        <a href="../ContactForm/ContactForm.html">Contact Form</a>
+        <a href="../AboutUs/AboutUs.html">About Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Vehicle Images -->
+  <div class="container">
+    <div id="item1" class="img">
+      <img id="img1" src="sedan.jpg" alt="Sedan Model" onmouseover="hoverImage1(this)" onmouseout="unhoverImage1(this)">
+      <p>Sedan Model</p>
+      <p>$5,000</p>
+    </div>
+    <div id="item2" class="img">
+      <img src="sportsedan.jpg" alt="Sport Sedan" onmouseover="hoverImage2(this)" onmouseout="unhoverImage2(this)">
+      <p>Sport Sedan</p>
+      <p>$12,000</p>
+    </div>
+    <div id="item3" class="img">
+      <img src="pickup.jpg" alt="Pickup Truck" onmouseover="hoverImage3(this)" onmouseout="unhoverImage3(this)">
+      <p>Pickup Truck</p>
+      <p>$30,000</p>
+    </div> 
+  </div>
+
+  <!-- Equipment Section -->
+  <h2>Equipment</h2>
+  <div class="equipment">
+    <div class="item">
+      <img src="eq1.jpg" alt="Winter Tires">
+      <p>Winter Tires - $120</p>
+      <button onclick="addToCart('Winter Tires', 120)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <img src="eq2.jpg" alt="Summer Tires">
+      <p>Summer Tires - $100</p>
+      <button onclick="addToCart('Summer Tires', 100)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <img src="eq3.jpg" alt="Windshield Wipers">
+      <p>Windshield Wipers - $30</p>
+      <button onclick="addToCart('Windshield Wipers', 30)">Add to Cart</button>
+    </div>
+    <div class="item">
+      <img src="eq4.jpg" alt="Car Lights">
+      <p>Car Lights - $50</p>
+      <button onclick="addToCart('Car Lights', 50)">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Shopping Cart -->
+  <h2>Shopping Cart</h2>
+  <div id="cart">
+    <img src="Eq5.jpg" alt="Shopping Cart" style="width: 50px; height: 50px; margin-right: 10px; vertical-align: middle;">
+    <span>Your cart items will appear here.</span>
+  </div>
+  <p id="total-price">Total: $0</p>
+
+  <script>
+    let cart = [];
+    
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartElement = document.getElementById('cart');
+      cartElement.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        cartElement.innerHTML += `
+          <div>
+            <span>${item.name} - $${item.price}</span>
+            <button onclick="removeFromCart(${index})">Remove</button>
+          </div>
+        `;
+      });
+      document.getElementById('total-price').textContent = `Total: $${total}`;
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+  </script>
+
+  <!-- Footer -->
+  <div id="clientCare" class="footerBox">
+    <p class="footerTitles">Follow Us</p>
+    <div class="icons">
+      <img src="instagram.jpg" alt="Instagram">
+      <p>Instagram</p>
+    </div>
+    <div class="icons">
+      <img src="facebook.jpg" alt="Facebook">
+      <p>Facebook</p>
+    </div>
+  </div>
+
+  <div id="newsletter" class="footerBox">
+    <p class="footerTitles">Join Our Newsletter</p>
+    <p style="color: #b3b3b3; font-size: 0.9em; margin-bottom: 10px;">
+      Sign up to receive the latest news, promotions, and updates from DriveX.
+    </p>
+    <form>
+      <input type="email" placeholder="Enter Your Email Address" required>
+      <input type="submit" value="SIGN UP">
+    </form>
+  </div>
+</body>
+</html>

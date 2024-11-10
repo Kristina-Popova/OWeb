@@ -1,0 +1,28 @@
+.container {
+    padding: 0 15% 100px 15%; /* Adjusted padding for better spacing */
+    text-align: center;
+    background-color: rgba(129, 95, 0, 0.041); /* Light background for visibility */
+    border-bottom: thin solid #72613852; /* Soft border for separation */
+    margin-top: 20px; /* Adds some spacing above the container */
+  }
+  
+  img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto; /* Maintains aspect ratio of images */
+  }
+  
+  .aboutUs {
+    position: relative; /* Changed to relative for proper flow */
+    z-index: 15; /* Ensures text appears above other elements */
+    font-size: x-large; /* Larger font for visibility */
+    font-weight: normal; /* Normal weight for readability */
+    color: #fff; /* White text for contrast against background */
+    font-family: 'Courier New', Courier, monospace; /* Ensured a classic font style */
+    padding: 20px 10%; /* Padding for spacing around text */
+    margin: 20px 15% 0 15%; /* Adjusted margin for consistent spacing */
+    text-align: center; /* Center text alignment */
+    font-style: italic; /* Italicized text for emphasis */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+  }
+  

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Store</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="logIn.js"></script>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    
+    /* Preheader style */
+    .preheader {
+      background-color: #4a4a4a;
+      color: #fff;
+      text-align: center;
+      padding: 8px 0;
+    }
+
+    /* Header styles */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #3a3a3a;
+      color: #fff;
+      padding: 15px 20px;
+    }
+    .title {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #c2a45f;
+    }
+    .title p {
+      margin: 0;
+    }
+    .title i {
+      font-size: 1.2em;
+    }
+    
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .menu a:hover {
+      color: #c2a45f;
+      text-decoration: underline;
+    }
+    
+    .searchInput {
+      padding: 5px;
+      width: 200px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    /* Login and cart icons */
+    #icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    #icons svg {
+      font-size: 1.2em;
+      cursor: pointer;
+      color: #fff;
+    }
+    #login/register p {
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #login/register p:hover {
+      color: #c2a45f;
+    }
+
+    /* Dialog styles */
+    dialog {
+      padding: 20px;
+      border: 2px solid #3a3a3a;
+      border-radius: 8px;
+    }
+    dialog h3 {
+      margin: 0 0 10px 0;
+      color: #3a3a3a;
+    }
+    dialog label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    dialog input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    dialog button {
+      background-color: #3a3a3a;
+      color: #fff;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    dialog button:hover {
+      background-color: #c2a45f;
+    }
+
+    /* About Us section */
+    .aboutUs {
+      text-align: center;
+      padding: 40px;
+      background-color: #f3f3f3;
+    }
+    .aboutUs h1 {
+      font-size: 2em;
+      color: #3a3a3a;
+    }
+    .aboutUs p {
+      font-size: 1.1em;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Car image */
+    #img1 {
+      display: block;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #3a3a3a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .footer p {
+      margin: 5px;
+      font-size: 0.9em;
+    }
+    .footer a {
+      color: #c2a45f;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preheader -->
+  <div id="preheader" class="preheader">
+    <p class="discount">Welcome to our Vehicle Store! Free shipping for orders over $99!</p>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="header">
+    <div id="title" class="title">
+      <a href="../HomePage/vehicle.html">
+        <p><i>Your Vehicle Store</i></p>
+        <p style="font-size: small;"><i>All your vehicle needs in one place</i></p>
+      </a>
+    </div>
+    <div id="main" class="main">
+      <input type="search" class="searchInput" placeholder="Search for vehicles...">
+      <div id="menu" class="menu">
+        <a href="../NewVehicles/NewVehicles.html">New Vehicles</a>
+        <a href="../UsedVehicles/UsedVehicles.html">Used Vehicles</a>
+        <a href="../ContactForm/ContactForm.html">Contact Form</a>
+        <a href="../AboutUs/AboutUs.html">About Us</a>
+      </div>
+    </div>
+    <div id="icons">
+      <svg id="list" class="lnr lnr-cart" onclick="showCartDialog()"><use xlink:href="#lnr-cart"></use></svg>
+      <div id="login/register">
+        <svg id="usr" class="lnr lnr-user" style="padding-right: 8px;"><use xlink:href="#lnr-user"></use></svg>
+        <p id="user" onclick="openLoginDialog()">Login/Register</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Dialog -->
+  <dialog id="signInDialog">
+    <form id="signInForm" method="dialog">
+      <h3>Login</h3>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="button" onclick="submit()">Login</button>
+      <button type="button" onclick="closeDialog()">Close</button>
+    </form>
+  </dialog>
+
+  <!-- Register Dialog -->
+  <dialog id="registerDialog">
+    <form id="registerForm" method="dialog">
+      <h3>Register</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="emailRegister">Email:</label>
+      <input type="email" id="emailRegister" required>
+      <label for="passwordRegister">Password:</label>
+      <input type="password" id="passwordRegister" required>
+      <button type="button" onclick="register()">Register</button>
+      <button type="button" onclick="closeRegisterDialog()">Close</button>
+    </form>
+  </dialog>
+
+  <!-- About Us Section -->
+  <div class="container">
+    <div id="body" class="body">
+      <div id="item" class="aboutUs">
+        <h1>About Us</h1>
+        <p>Your go-to place for both new and used vehicles, committed to quality and customer satisfaction.</p>
+      </div>
+      <img id="img1" src="cars.jpg" alt="Cars image">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footerContent">
+      <p>© 2024 Your Vehicle Store. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+</body>
+</html>

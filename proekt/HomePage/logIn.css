@@ -1,0 +1,61 @@
+/* Header styling */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Login container styling */
+#loginContainer {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#loginContainer:hover {
+    background-color: #e0e0e0;
+}
+
+/* Dialog box styling */
+dialog {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+dialog label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+dialog input[type="email"],
+dialog input[type="password"],
+dialog input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+dialog button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+dialog button:hover {
+    background-color: #45a049;
+}

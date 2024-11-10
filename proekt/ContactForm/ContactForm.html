@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="contactForm.css">
+  <style>
+    html, body {
+      margin: 0px;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .underline:hover {
+      text-decoration: underline #c2a45f;
+    }
+    .padding12px {
+      padding: 12px;
+    }
+    .button {
+      background-color: #72623cd3;
+      border-radius: 8px;
+      margin: 0px 10px 0px 10px;
+      width: -webkit-fill-available;
+      font-size: large;
+      font-family: 'Courier New', Courier, monospace;
+      cursor: pointer;
+    }
+    .popup {
+      position: relative;
+      display: inline-block;
+    }
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      top: 45px;
+      left: 50%;
+      margin-left: -80px;
+    }
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent rgb(255, 255, 255) transparent;
+    }
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 0.5s;
+      animation: fadeIn 0.5s;
+    }
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+    header #title p {
+      margin: 0;
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    header #title i {
+      font-size: 1.2em;
+      color: #b0b0b0;
+    }
+    .menu {
+      display: flex;
+      justify-content: space-around;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .menu a:hover {
+      color: #c2a45f;
+    }
+    .footerBox {
+      padding: 15px;
+      background-color: #333;
+      color: #fff;
+      margin: 20px 0;
+    }
+    .footerTitles {
+      font-size: 1.2em;
+      color: #c2a45f;
+      font-weight: bold;
+    }
+    .footerBox p {
+      font-size: 0.9em;
+      color: #d0d0d0;
+    }
+    .footerBox form input[type="email"] {
+      padding: 10px;
+      width: 60%;
+      border: none;
+      border-radius: 4px;
+    }
+    .footerBox form input[type="submit"] {
+      padding: 10px 15px;
+      background-color: #c2a45f;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .footerBox form input[type="submit"]:hover {
+      background-color: #b3924e;
+    }
+    .footerBox .icons img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .footerBox .icons {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preheader" class="preheader">
+    <p class="discount">
+      Fall collection discount! Free shipping for orders over $99!
+    </p>
+  </div>
+
+  <header id="header" class="header">
+    <div id="title" class="title">
+      <a href="../HomePage/vehicle.html">
+        <p>
+          <i>Your Vehicle Store</i>
+        </p>
+        <p style="font-size: small;">
+          <i>All your vehicle needs in one place</i>
+        </p>
+      </a>
+    </div>
+    <div id="menu" class="menu">
+      <a href="../NewVehicles/NewVehicles.html">
+        <div id="newVehicles" class="categories underline">New Vehicles</div>
+      </a>
+      <a href="../UsedVehicles/UsedVehicles.html">
+        <div id="usedVehicles" class="categories underline">Used Vehicles</div>
+      </a>
+      <a href="../ContactForm/ContactForm.html">
+        <div class="categories underline">Contact Form</div>
+      </a>
+      <a href="../AboutUs/AboutUs.html">
+        <div class="categories underline">About Us</div>
+      </a>
+    </div>
+  </header>
+
+  <div style="min-height: 500px; overflow: scroll;">
+    <div class="container">
+      <form id="body" class="body">
+        <div>
+          <p>Name</p>
+          <input class="inputs" type="text" placeholder="Input name here..." required>
+        </div>
+        <div>
+          <p>Surname</p>
+          <input class="inputs" type="text" placeholder="Input surname here..." required>
+        </div>
+        <div>
+          <p>Address</p>
+          <input class="inputs" type="text" placeholder="Street name, city" required>
+        </div>
+        <div>
+          <p>Phone number</p>
+          <input class="inputs" type="tel" placeholder="+389********" required>
+        </div>
+        <div>
+          <p>Sex</p>
+          <input type="radio" name="radAnswer">
+          <p style="color: #726138; display: inline; font-size: medium; font-weight: lighter;">Male</p>
+          <input type="radio" name="radAnswer">
+          <p style="color: #726138; display: inline; font-size: medium; font-weight: lighter;">Female</p>
+          <input type="radio" name="radAnswer">
+          <p style="color: #726138; display: inline; font-size: medium; font-weight: lighter;">Other</p>
+        </div>
+        <div>
+          <p>Your impressions</p>
+          <textarea cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Submit" class="button">
+        </div>
+      </form>
+    </div>
+
+    <footer id="footer" class="footer">
+        <p>Phone Orders</p>
+        <p>+389 400 570 </p>
+        <div id="clientCare" class="footerBox">
+        <p class="footerTitles">Follow Us</p>
+        <div class="icons">
+          <img src="instagram.jpg" alt="Instagram">
+          <p>Instagram</p>
+        </div>
+        <div class="icons">
+          <img src="facebook.jpg" alt="Facebook">
+          <p>Facebook</p>
+        </div>
+        <div class="icons">
+          <img src="pinterest.jpg" alt="Pinterest">
+          <p>Pinterest</p>
+        </div>
+        <div class="icons">
+          <img src="linkedin.jpg" alt="LinkedIn">
+          <p>LinkedIn</p>
+        </div>
+      </div>
+      <div id="newsletter" class="footerBox">
+        <p class="footerTitles">Join Our Newsletter</p>
+        <p style="color: #6d6b67; font-size: small; margin-bottom: 10px;">By signing up, you agree that your email address will be used only to send you marketing newsletters and information about Your Vehicle Store, events and offers. You can unsubscribe at any time by clicking on the unsubscribe link in each newsletter.</p>
+        <form>
+          <input type="email" placeholder="Enter Your email address" required>
+          <input type="submit" value="SIGN UP">
+        </form>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

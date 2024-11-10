@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Cars - DriveX Vehicle Store</title>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="../css/preheader.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <style>
+    /* General styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+    .section-header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #3a3a3a;
+      color: #ffffff;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+      gap: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      transition: transform 0.2s;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+    }
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+    .button {
+      background-color: #72623cd3;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .comment-section {
+      margin-top: 15px;
+      text-align: left;
+    }
+    .comment-input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .comment-list {
+      margin-top: 10px;
+    }
+    .comment {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+    }
+    .like-button {
+      cursor: pointer;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header and Preheader -->
+  <header id="header" class="header">
+    <div class="title">
+      <a href="../HomePage/vehicle.html">
+        <h1>DriveX</h1>
+        <p>Our newest vehicles</p>
+      </a>
+    </div>
+  </header>
+
+  <!-- New Cars Section -->
+  <section class="section-header">
+    <h1>Explore Our New Cars</h1>
+    <p>Latest models, top brands, and unbeatable prices.</p>
+  </section>
+
+  <div class="container">
+    <!-- Car Card 1 -->
+    <div class="card" data-car-id="1">
+      <img src="car1.jpg" alt="Sedan Model">
+      <div class="card-content">
+        <h2>Sedan Model</h2>
+        <p class="card-price">$25,000</p>
+        <button class="button">Add to Cart</button>
+        <div class="like-button" onclick="likeCar(1)">❤️ Like (<span id="like-count-1">0</span>)</div>
+        
+        <!-- Comment Section -->
+        <div class="comment-section">
+          <input type="text" id="comment-input-1" class="comment-input" placeholder="Add a comment" />
+          <button class="button" onclick="addComment(1)">Add Comment</button>
+          <div id="comment-list-1" class="comment-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car Card 2 -->
+    <div class="card" data-car-id="2">
+      <img src="car2.jpg" alt="Sport Coupe">
+      <div class="card-content">
+        <h2>Sport Coupe</h2>
+        <p class="card-price">$35,000</p>
+        <button class="button">Add to Cart</button>
+        <div class="like-button" onclick="likeCar(2)">❤️ Like (<span id="like-count-2">0</span>)</div>
+        
+        <div class="comment-section">
+          <input type="text" id="comment-input-2" class="comment-input" placeholder="Add a comment" />
+          <button class="button" onclick="addComment(2)">Add Comment</button>
+          <div id="comment-list-2" class="comment-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car Card 3 -->
+    <div class="card" data-car-id="3">
+      <img src="car3.jpg" alt="SUV Model">
+      <div class="card-content">
+        <h2>SUV Model</h2>
+        <p class="card-price">$40,000</p>
+        <button class="button">Add to Cart</button>
+        <div class="like-button" onclick="likeCar(3)">❤️ Like (<span id="like-count-3">0</span>)</div>
+        
+        <div class="comment-section">
+          <input type="text" id="comment-input-3" class="comment-input" placeholder="Add a comment" />
+          <button class="button" onclick="addComment(3)">Add Comment</button>
+          <div id="comment-list-3" class="comment-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car Card 4 -->
+    <div class="card" data-car-id="4">
+      <img src="car4.jpg" alt="Convertible">
+      <div class="card-content">
+        <h2>Convertible</h2>
+        <p class="card-price">$45,000</p>
+        <button class="button">Add to Cart</button>
+        <div class="like-button" onclick="likeCar(4)">❤️ Like (<span id="like-count-4">0</span>)</div>
+        
+        <div class="comment-section">
+          <input type="text" id="comment-input-4" class="comment-input" placeholder="Add a comment" />
+          <button class="button" onclick="addComment(4)">Add Comment</button>
+          <div id="comment-list-4" class="comment-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <p>&copy; 2024 DriveX. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to like a car
+    function likeCar(carId) {
+      const likeCountElement = document.getElementById(`like-count-${carId}`);
+      let likeCount = parseInt(likeCountElement.innerText);
+      likeCount++;
+      likeCountElement.innerText = likeCount;
+    }
+
+    // Function to add a comment
+    function addComment(carId) {
+      const input = document.getElementById(`comment-input-${carId}`);
+      const commentText = input.value.trim();
+      if (commentText) {
+        const commentList = document.getElementById(`comment-list-${carId}`);
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        
+        // Display comment text and a delete button
+        commentDiv.innerHTML = `
+          <span>${commentText}</span>
+          <button onclick="deleteComment(this)">Delete</button>
+        `;
+        
+        // Append new comment to list and clear input
+        commentList.appendChild(commentDiv);
+        input.value = '';
+      }
+    }
+
+    // Function to delete a comment
+    function deleteComment(deleteButton) {
+      const comment = deleteButton.parentElement;
+      comment.remove();
+    }
+  </script>
+</body>
+</html>
