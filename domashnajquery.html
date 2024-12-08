@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Filter for names
+  $("#nameSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).find("td:nth-child(1)").text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+
+  // Filter for surnames
+  $("#surnameSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).find("td:nth-child(2)").text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+
+  // Filter for emails
+  $("#emailSearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).find("td:nth-child(3)").text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+
+<h2>Search Table</h2>
+<p>Search by Name:</p>
+<input id="nameSearch" type="text" placeholder="Search for names..">
+<p>Search by Surname:</p>
+<input id="surnameSearch" type="text" placeholder="Search for surnames..">
+<p>Search by Email:</p>
+<input id="emailSearch" type="text" placeholder="Search for emails..">
+
+<table id="myTable">
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Email</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>john.doe@example.com</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Smith</td>
+    <td>jane.smith@example.com</td>
+  </tr>
+  <tr>
+    <td>Emily</td>
+    <td>Jones</td>
+    <td>emily.jones@example.com</td>
+  </tr>
+</table>
+
+</body>
+</html>
